@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>KitoNe 1day講座｜うさしほ</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#FAF6F2;color:#574B47;-webkit-font-smoothing:antialiased}
+a{color:#574B47}a:hover{color:#6E615C}
+html{scroll-behavior:smooth}
+@keyframes kn-hop{0%,100%{transform:translateY(0)}25%{transform:translateY(-6px)}50%{transform:translateY(0)}70%{transform:translateY(-2px)}}
+@keyframes kn-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(8deg)}}
+@keyframes kn-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes kn-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes kn-popspin{0%{opacity:0;transform:scale(.3) rotate(-200deg)}60%{opacity:1;transform:scale(1.12) rotate(12deg)}80%{transform:scale(.95) rotate(-4deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes kn-menu{0%{opacity:0;transform:translateY(-8px) scale(.96)}100%{opacity:1;transform:none}}
+@media (min-width:768px){br[data-sp]{display:none}}
+@media (max-width:767px){
+[data-m~="hero"]{position:static!important}
+[data-m~="hero-photo"]{position:absolute!important;inset:0!important;aspect-ratio:auto!important;width:auto!important;z-index:0}
+[data-m~="hero-veil"]{display:block!important}
+[data-m~="hero-text"]{position:relative;z-index:1}
+[data-m~="hero-badge"]{display:none!important}
+[data-m~="row3"]{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+[data-m~="row3"]>*{margin-top:0!important}
+[data-m~="sq"]{aspect-ratio:1/1!important}
+[data-m~="cap"] figcaption{font-size:11px!important;line-height:1.6}
+[data-m~="grid2"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+[data-m~="grid2"]>*{padding:16px 14px!important;gap:8px!important}
+[data-m~="grid2"]>* p:first-of-type{font-size:15px!important}
+[data-m~="grid2"]>* p{font-size:12px!important}
+[data-m~="grid2"]>* span:first-child{font-size:30px!important}
+[data-m~="pc-only"]{display:none!important}
+[data-m~="inst-photo"]{max-width:200px!important;margin:0 auto}
+[data-m~="kala"]{max-width:200px!important}
+[data-m~="sec"]{padding-top:48px!important;padding-bottom:48px!important}
+}
+
+@media (max-width:767px){
+[data-m~="hero-text"]{color:#FAF6F2;text-shadow:0 1px 8px rgba(40,32,30,.35);padding:12px 0}
+[data-m~="hero-text"] [data-m~="keep"]{color:#574B47;text-shadow:none}
+[data-m~="hero-text"] [data-m~="line"]{border-color:#FAF6F2!important;color:#FAF6F2!important}
+[data-m~="hero-text"] [data-m~="soft"]{color:#FAF6F2!important;opacity:.9}
+[data-m~="hero-text"] [data-marker]{background-image:linear-gradient(rgba(201,168,106,.6),rgba(201,168,106,.6))!important}
+[data-m~="hero-text"] a[href*="x.gd"]{background:#FAF6F2!important;color:#574B47!important;text-shadow:none}
+}
+@media (min-width:768px){[data-m~="sp-only"]{display:none!important}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+
+<div style="font-family:'Zen Maru Gothic',sans-serif;font-size:14px;line-height:1.9;color:#574B47;background:#FAF6F2;overflow-x:clip">
+<sc-if value="{{ showMobileBar }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(250,246,242,.96);backdrop-filter:blur(8px);border-top:1px solid #E8C4C0;display:grid;grid-template-columns:1.4fr 1fr;gap:8px;animation:kn-menu .3s ease both">
+    <a href="https://x.gd/Iviw3" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:52px;border-radius:999px;background:#574B47;color:#FAF6F2;text-decoration:none;line-height:1.3" style-hover="color:#FAF6F2"><span style="font-size:14px;font-weight:700">10/24 お申込み</span><span style="font-size:10px">10/10まで・対面 残り1名</span></a>
+    <a href="https://lin.ee/668ryLr" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:999px;border:1px solid #574B47;background:#FAF6F2;font-size:13px;font-weight:700;text-decoration:none">LINEで質問</a>
+  </div>
+</sc-if>
+
+
+
+
+<sc-if value="{{ showMenuBtn }}" hint-placeholder-val="{{ false }}">
+  <button onClick="{{ toggleMenu }}" aria-label="メニュー" aria-expanded="{{ menuOpen }}" style="position:fixed;top:16px;right:16px;z-index:60;width:52px;height:52px;animation:kn-popspin .7s cubic-bezier(.3,1.4,.5,1) both;border-radius:50%;background:#E8C4C0;border:3px solid #F7EFE1;box-shadow:0 3px 10px rgba(87,75,71,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0" style-hover="background:#DDB0AB"><span style="display:block;width:18px;height:2px;border-radius:2px;background:#574B47"></span><span style="display:block;width:18px;height:2px;border-radius:2px;background:#574B47"></span><span style="display:block;width:18px;height:2px;border-radius:2px;background:#574B47"></span></button>
+</sc-if>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav style="position:fixed;top:72px;right:16px;z-index:60;width:300px;max-width:calc(100vw - 32px);box-sizing:border-box;background:#FFFFFF;border:1px solid #E8C4C0;border-radius:24px;padding:8px 20px;box-shadow:0 8px 24px rgba(87,75,71,.10);transform-origin:top right;animation:kn-menu .25s ease both">
+      <sc-for list="{{ menuItems }}" as="m" hint-placeholder-count="7">
+        <a href="{{ m.href }}" onClick="{{ m.go }}" style="display:flex;align-items:center;min-height:52px;font-family:'Kanata','Kiwi Maru',serif;font-size:16px;color:#574B47;text-decoration:none;border-top:{{ m.sep }}" style-hover="color:#6E615C">{{ m.label }}</a>
+      </sc-for>
+    </nav>
+  </sc-if>
+<header style="position:relative;z-index:20;background:rgba(250,246,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid #F3E1DE">
+  <a data-m="pc-only" href="https://x.gd/Iviw3" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2px 14px;padding:7px 16px;background:#574B47;color:#FAF6F2;font-size:12px;text-decoration:none;text-align:center" style-hover="color:#FAF6F2;background:#6E615C"><span style="white-space:nowrap">ファスティングマイスター初級 <strong style="font-weight:700"><span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:15px">10/24</span>（土）開催</strong></span><span style="white-space:nowrap">お申込みは <strong style="font-weight:700"><span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:15px">10/10</span>（土）まで</strong>｜対面 残り1名 →</span></a>
+  <div style="max-width:1080px;margin:0 auto;padding:8px 16px;display:flex;align-items:center;gap:12px">
+    <a href="#top" style="flex:none;display:flex"><img src="assets/kitone-logo.png" alt="KitoNe" style="height:44px;width:auto;display:block"></a>
+    <span style="flex:1"></span>
+    <a href="https://x.gd/Iviw3" target="_blank" rel="noopener" style="flex:none;display:inline-flex;align-items:center;min-height:40px;padding:0 18px;border-radius:999px;background:#574B47;color:#FAF6F2;font-weight:700;font-size:13px;text-decoration:none" style-hover="animation:kn-hop .6s ease;color:#FAF6F2">10/24 申込み</a>
+    <button onClick="{{ toggleMenu }}" aria-label="メニュー" aria-expanded="{{ menuOpen }}" style="flex:none;width:46px;height:46px;border-radius:50%;background:#E8C4C0;border:3px solid #F7EFE1;box-shadow:0 3px 10px rgba(87,75,71,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0" style-hover="background:#DDB0AB"><span style="display:block;width:18px;height:2px;border-radius:2px;background:#574B47"></span><span style="display:block;width:18px;height:2px;border-radius:2px;background:#574B47"></span><span style="display:block;width:18px;height:2px;border-radius:2px;background:#574B47"></span></button>
+  </div>
+  
+</header>
+
+<section id="top" style="position:relative;padding:clamp(40px,8vw,88px) 0 clamp(56px,9vw,104px)">
+  <div data-m="hero" style="position:relative;max-width:1080px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,6vw,64px);align-items:center">
+    <div data-m="hero-text" style="display:flex;flex-direction:column;gap:24px">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:28px;height:1px;background:#C9A86A"></span>SPECIAL INVITATION</div>
+      <h1 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,7.4vw,44px);line-height:1.45;letter-spacing:.04em;text-wrap:pretty">2026年<br><span style="white-space:nowrap">初の<span data-marker="1" style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 38%;padding:0 4px">1日講座</span>、開催！</span></h1>
+      <p style="margin:0;font-size:clamp(16px,2.4vw,19px);font-weight:500;line-height:1.8">うさしほが<strong style="font-weight:700">脱サラする<br>きっかけになった講座</strong></p>
+      <div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #C9A86A;border-bottom:1px solid #C9A86A;padding:16px 0">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px"><span data-m="keep" style="padding:6px 14px;border-radius:12px;background:#E8C4C0;font-size:14px;font-weight:700;line-height:1.5;display:inline-flex;flex-direction:column">予防医学×食のセルフケア 1日講座<span style="font-size:11px;font-weight:500">（ファスティングマイスター初級）</span></span><span style="display:flex;align-items:baseline;gap:2px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:32px">10/24</span><span style="font-size:14px">（土）開催</span></span><span data-m="line" style="display:inline-flex;align-items:center;gap:6px;padding:2px 12px;border-radius:999px;border:1px solid #574B47;font-size:12px;font-weight:700">対面 残り<span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:15px">1</span>名／Zoom 受付中</span><p style="margin:0;width:100%;font-size:13px">お申込みは <strong style="font-weight:700"><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:17px">10/10</span>（土）まで</strong>。</p></div>
+      </div>
+    </div>
+    <div data-m="hero-photo" style="position:relative;aspect-ratio:4/5;width:100%">
+      <image-slot id="hero" shape="rect" placeholder="やわらかな布のビジュアル" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+      <div data-m="hero-veil" style="display:none;position:absolute;inset:0;background:linear-gradient(rgba(60,50,47,.5),rgba(60,50,47,.68));pointer-events:none"></div>
+      <div data-m="hero-badge" style="position:absolute;right:-8px;bottom:-18px;width:96px;height:96px;border-radius:50%;background:#FAF6F2;border:1px solid #C9A86A;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:kn-sway 3s ease-in-out infinite;pointer-events:none">
+        <span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:10px;letter-spacing:.2em">ONE DAY</span>
+        <span style="font-family:'Kanata','Kiwi Maru',serif;font-size:15px">1日完結</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="foryou" data-m="sec" style="padding:clamp(64px,10vw,112px) 0;background:#E8C4C0">
+  <div data-reveal="1" style="max-width:720px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;align-items:center;gap:32px">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">FOR YOU</div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">こんなあなたへ</h2>
+    </div>
+    <div style="width:100%;background:#FAF6F2;border-radius:24px;padding:clamp(20px,4vw,36px);display:flex;flex-direction:column">
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed #E8C4C0"><span style="flex:none;width:26px;height:26px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>ファスティングに興味がある</div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed #E8C4C0"><span style="flex:none;width:26px;height:26px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:12px;color:#574B47">✓</span>自分や家族の食を見直したい</div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed #E8C4C0"><span style="flex:none;width:26px;height:26px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>なんとなく不調を改善したい</div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed #E8C4C0"><span style="flex:none;width:26px;height:26px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>食についてちゃんと学んだことがない</div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed #E8C4C0"><span style="flex:none;width:26px;height:26px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>自己流に限界を感じてきた</div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed #E8C4C0"><span style="flex:none;width:26px;height:26px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>食から人生の土台を整えたい</div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 0"><span style="flex:none;width:26px;height:26px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>副業のきっかけがほしい</div>
+    </div>
+    <p style="margin:0;text-align:center;font-weight:500">ひとつでも当てはまったら、<br><strong style="font-weight:700">この講座、きっと合うはず</strong> <span style="display:inline-block;animation:kn-bob 2s ease-in-out infinite">🐰</span></p>
+  </div>
+</section>
+
+<section data-m="sec" style="padding:clamp(64px,10vw,112px) 0;border-top:1px solid #F3E1DE">
+  <div data-reveal="1" data-m="row3" style="max-width:1080px;margin:0 auto clamp(32px,6vw,56px);padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+    <div data-m="sq" style="position:relative;aspect-ratio:4/3"><image-slot id="intro-1" shape="rounded" radius="20" placeholder="木の温もりのある会場で進む講座" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+    <div data-m="sq" style="position:relative;aspect-ratio:4/3;margin-top:clamp(0px,3vw,32px)"><image-slot id="intro-2" shape="rounded" radius="20" placeholder="講座後に食卓を囲む参加者" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+    <div data-m="sq" style="position:relative;aspect-ratio:4/3"><image-slot id="intro-3" shape="rounded" radius="20" placeholder="緑豊かな場所での集合写真" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+  </div>
+  <div data-reveal="1" style="max-width:760px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+    <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:24px;height:1px;background:#C9A86A"></span>PREVENTIVE CARE × FOOD<span style="width:24px;height:1px;background:#C9A86A"></span></div>
+    <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(24px,4.6vw,36px);line-height:1.6;letter-spacing:.04em">情報に振りまわされない、<br><span data-marker="1" style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 38%;padding:0 4px">自分の軸</span>を、1日で学ぼう！</h2>
+    <p style="margin:0">うさしほ自身、会社員時代（<span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:17px">2021</span>年）に学んで<br data-sp="1">「<strong style="font-weight:700">学びたかったのはコレだっ！</strong>」って<br data-sp="1">当時感銘を受けた講座。</p>
+    <p style="margin:0">初級だけでは足りなくて、<br data-sp="1">すぐに2級まで受講。</p>
+    <p style="margin:0;font-size:13px;color:#6E615C">（2級まで受講すると、サポートができたり<br data-sp="1">副業やお仕事に活かせます。）</p>
+    <p style="margin:0">会社員をしながら副業で<br data-sp="1">ファスティングのサポートを開始し、<br data-sp="1"><strong style="font-weight:700">月<span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:19px">5〜10</span>万</strong>など少しずつ収入につながりました。</p>
+    <p style="margin:0">初級を受けた<span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:17px">4</span>ヶ月後に脱サラを決意。<br><strong style="font-weight:700">わたしの人生が変わった講座</strong>です。</p>
+    <p style="margin:0">誰かの正解やSNS、メディアの情報ではなく<br data-sp="1"><strong style="font-weight:700">自分で選ぶ軸を持つ。</strong><br>ファスティング（マイナスの栄養学）と<br data-sp="1">日々の食事（プラスの栄養学）。<br>2つの方向から食の土台を築いて、<br data-sp="1">自分の軸を磨こう！</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+      <a href="https://x.gd/Iviw3" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;background:#574B47;color:#FAF6F2;font-weight:700;font-size:15px;letter-spacing:.04em;text-decoration:none;text-align:center;" style-hover="animation:kn-hop .6s ease;color:#FAF6F2">10/24のお申込みはこちら</a>
+      <a href="https://lin.ee/668ryLr" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid #574B47;font-weight:500;font-size:15px;text-decoration:none;text-align:center;" style-hover="background:#F3E1DE;animation:kn-hop .6s ease">LINEで気軽に質問する</a>
+    </div>
+  </div>
+</section>
+
+<section id="voice" data-m="sec" style="padding:clamp(64px,10vw,112px) 0;background:#F3E1DE">
+  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:32px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:24px;height:1px;background:#C9A86A"></span>VOICE<span style="width:24px;height:1px;background:#C9A86A"></span></div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">受講された方のお声</h2>
+      <p style="margin:0">ファスティングマイスター初級を<br>受講された方からいただいた感想です。</p>
+    </div>
+    <div data-reveal="1" style="display:flex;flex-direction:column;gap:16px">
+      <div ref="{{ voiceRef }}" style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 16px;margin:0 -20px;scrollbar-width:thin;scrollbar-color:#E8C4C0 transparent;-webkit-overflow-scrolling:touch">
+        <sc-for list="{{ voices }}" as="v" hint-placeholder-count="3">
+          <article style="flex:none;width:min(84%,340px);scroll-snap-align:start;box-sizing:border-box;border:1px solid #E8C4C0;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px;background:#FAF6F2">
+            <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:40px;line-height:.6;color:#C9A86A">“</span><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.2em;color:#6E615C">{{ v.no }}</span></div>
+            <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:17px;line-height:1.6">{{ v.title }}</p>
+            <sc-if value="{{ v.hasNote }}" hint-placeholder-val="{{ false }}"><span style="align-self:flex-start;padding:2px 12px;border-radius:999px;background:#F3E1DE;font-size:12px;font-weight:700">{{ v.note }}</span></sc-if>
+            <div style="display:flex;flex-direction:column;gap:10px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:14px;line-height:1.9;padding-top:12px;border-top:1px dashed #E8C4C0">
+              <sc-for list="{{ v.paras }}" as="p"><p style="margin:0"><sc-for list="{{ p }}" as="s"><sc-if value="{{ s.b }}"><strong style="font-weight:700;background:linear-gradient(#F3E1DE,#F3E1DE) no-repeat 0 90%/100% 40%">{{ s.t }}</strong></sc-if><sc-if value="{{ s.n }}">{{ s.t }}</sc-if></sc-for></p></sc-for>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:16px">
+        <button onClick="{{ voicePrev }}" aria-label="前へ" style="all:unset;cursor:pointer;width:48px;height:48px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:18px;color:#574B47" style-hover="background:#F3E1DE">←</button>
+        <span style="font-size:12px;color:#6E615C">スワイプで見られます</span>
+        <button onClick="{{ voiceNext }}" aria-label="次へ" style="all:unset;cursor:pointer;width:48px;height:48px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:18px;color:#574B47" style-hover="background:#F3E1DE">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="courses" data-m="sec" style="padding:clamp(64px,10vw,112px) 0">
+  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:40px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:24px;height:1px;background:#C9A86A"></span>ABOUT THE COURSE<span style="width:24px;height:1px;background:#C9A86A"></span></div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">「食べない」を知る、<br>引き算の栄養学。</h2>
+      <p style="margin:0">1日で完結する資格講座。<br>「何を避けた方がいいのか？」を知って、<br>自分で選ぶ軸を持とう。</p>
+      <p style="margin:0;padding:6px 18px;border-radius:999px;border:1px solid #C9A86A;font-size:14px;line-height:1.7"><strong style="font-weight:700">食や健康のサポートを<br>副業やお仕事にしたい方</strong>にもおすすめです</p>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:24px;max-width:760px;width:100%;margin:0 auto">
+      <article data-reveal="1" style="border:1px solid #E8C4C0;border-radius:24px;padding:clamp(24px,4vw,36px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:flex-end;gap:14px"><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:11px;letter-spacing:.2em">FASTING ／ マイナスの栄養学</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <h3 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:22px;line-height:1.5">予防医学×食のセルフケア 1日講座</h3>
+          <p style="margin:0;font-weight:700">ファスティングマイスター初級</p>
+          <span style="align-self:flex-start;margin-top:6px;padding:2px 14px;border-radius:999px;border:1px solid #E8C4C0;font-size:13px">開催日 <span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:16px">10/24</span>（土）</span>
+        </div>
+        <p style="margin:0;font-family:'Zen Kaku Gothic New',sans-serif;line-height:2">資格をとることがゴールではなく、<strong style="font-weight:700">「食べる／食べない」を自分で選べるようになり、ファスティングをする知識を身につける</strong>ための1日。<br>普段の不調の原因が分かったり、断食を我慢ではなく、からだの仕組みから理解していきます。</p>
+        <div style="display:flex;flex-direction:column;gap:14px;padding-top:6px;border-top:1px solid #F3E1DE">
+          <div style="display:flex;gap:10px"><span style="color:#C9A86A;font-size:10px;padding-top:6px">◆</span><div><p style="margin:0;font-weight:700">基本のファスティングが学べる</p><p style="margin:0;font-size:14px">老舗協会の「バイタルファスティング」を軸に。栄養を補いながら行うので、仕事や家事を続けながらできます。</p></div></div>
+          <div style="display:flex;gap:10px"><span style="color:#C9A86A;font-size:10px;padding-top:6px">◆</span><div><p style="margin:0;font-weight:700">からだの中のしくみから分かる</p><p style="margin:0;font-size:14px">オートファジーをはじめ、美肌・腸活・添加物・環境ホルモンのお話も。</p></div></div>
+          <div style="display:flex;gap:10px"><span style="color:#C9A86A;font-size:10px;padding-top:6px">◆</span><div><p style="margin:0;font-weight:700">学んだあとのフォローアップ体制</p><p style="margin:0;font-size:14px">会報誌、商品の特別価格、協会顧問医師への相談も。</p></div></div>
+        </div>
+        <div style="margin-top:auto;background:#F3E1DE;border-radius:12px;padding:12px 16px;font-size:14px">学習時間：1日 約<span style="font-family:'Raleway',sans-serif;font-size:17px">5</span>時間 ＋ 検定試験<span style="font-family:'Raleway',sans-serif;font-size:17px">30</span>分</div>
+      </article>
+    </div>
+    </div>
+</section>
+
+<section data-m="sec" style="padding:clamp(64px,10vw,112px) 0;border-top:1px solid #F3E1DE">
+  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:40px">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,5vw,56px);align-items:start">
+      <div data-m="sp-only" style="display:flex;flex-direction:column;gap:6px;text-align:center"><div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">INSTRUCTOR</div><h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:30px">うさしほ</h2><p style="margin:0;font-size:12px">ファスティングマイスター／健康美容食育士 認定講師</p></div>
+      <div data-m="inst-photo" style="position:relative;aspect-ratio:4/5;max-width:420px;width:100%"><image-slot id="instructor" shape="rounded" radius="20" placeholder="講師 うさしほ" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div data-m="pc-only" style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">INSTRUCTOR</div>
+        <div data-m="pc-only" style="display:flex;align-items:center;gap:12px"><h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(28px,5vw,40px)">うさしほ</h2></div>
+        <p data-m="pc-only" style="margin:0;font-size:13px">ファスティングマイスター／健康美容食育士 認定講師</p>
+        <div style="font-family:'Zen Kaku Gothic New',sans-serif;line-height:2;display:flex;flex-direction:column;gap:20px">
+          <p style="margin:0">最初は、自分の知識に<br data-sp="1">自信をつけたくて学んだこの講座。</p>
+          <p style="margin:0">会社員の時に、<br data-sp="1">ファスティングサポートを急遽任され、<br data-sp="1">自分で探して、もちろん自腹で<br data-sp="1">2級まで学びました。</p>
+          <p style="margin:0">わたしの<strong style="font-weight:700">人生で初の自己投資</strong>です<br data-sp="1">（この価格帯の）💰</p>
+          <button onClick="{{ t1 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 18px;border-radius:999px;border:1px solid #E8C4C0;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#574B47;align-self:flex-start;" style-hover="background:#F3E1DE"><span>続きを読む</span><span style="flex:none;width:24px;height:24px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .3s;transform:{{ r1 }}">＋</span></button>
+          <sc-if value="{{ o1 }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0">自分が実際に断食を体験して<br data-sp="1">よかったのはもちろんですが、<br data-sp="1">それよりも嬉しかったのが、お客様のお声。</p>
+          <p style="margin:0">「<strong style="font-weight:700">しほさんのおかげで人生変わりました</strong>」ということ。</p>
+          <p style="margin:0">これまで約4年間活動してきて、<br data-sp="1">知識だけでなく、<br data-sp="1">そこでの学び、気づきともに伝えたい。</p>
+          <p style="margin:0">一生続ける「食」だからこそ、<br data-sp="1"><strong style="font-weight:700">食から自分を大切にする人を増やしたい。</strong></p>
+          <p style="margin:0">そう思って、いまは<br data-sp="1">ファスティングのサポートや<br data-sp="1">この講座の開催を<br data-sp="1">仕事のひとつとして続けています。</p>
+          <p style="margin:0">これまで<strong style="font-weight:700"><span style="font-family:'Raleway',sans-serif;font-size:18px">130</span>名以上の方</strong>が、<br data-sp="1">私を通して資格を学んでくださいました。</p>
+          <p style="margin:0">学ぶ理由は人それぞれ。<br>「この知識をどう活かしたいんだろう？」<br data-sp="1">というところまでいっしょに考え、</p>
+          <p style="margin:0">安くはない講座だからこそ、<br data-sp="1"><strong style="font-weight:700">人生を変えるきっかけ</strong>の<br data-sp="1"><span data-marker="1" style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 38%;padding:0 2px">1日</span>にしましょう！</p>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="1" style="border:1px solid #E8C4C0;border-radius:24px;padding:clamp(20px,4vw,32px);display:flex;flex-wrap:wrap;gap:24px;align-items:center">
+      <div style="position:relative;width:120px;height:120px;flex:none"><img src="assets/noguchi-saki.jpg" alt="野口沙貴さん" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;display:block"></div>
+      <div style="flex:1;min-width:240px;display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">MY ROLE MODEL</div>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:19px">野口沙貴さんから学びました</p>
+        <p style="margin:0;font-size:12px;color:#6E615C">30代からの賢い自分磨き｜デトックス美容家</p>
+        <p style="margin:0;font-size:14px">当時、断食の参考にしようと<br>YouTubeで見つけたのがさきさん。<br>そこからずっとロールモデル的な存在で、<br>今も「すごいお方だな」と常々思っています。<br>Instagramはフォロワー7万人以上。ぜひご覧ください＾＾</p>
+        <a href="https://www.instagram.com/saki_m0rningram/" target="_blank" rel="noopener" style="align-self:flex-start;font-size:14px;font-weight:700;text-decoration:none;border-bottom:1px solid #C9A86A">野口沙貴さんのInstagramを見る →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="merit" data-m="sec" style="padding:clamp(64px,10vw,112px) 0;background:#E8C4C0">
+  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:40px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">WHY USASHIHO</div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,40px);line-height:1.5"><span style="background:linear-gradient(#FAF6F2,#FAF6F2) no-repeat 0 88%/100% 38%;padding:0 4px">うさしほから学ぶ</span><br>いいところ</h2>
+      <p style="margin:0">資格の内容はどこで受けても同じ。<br>だからこそ、<strong style="font-weight:700">学んだあと</strong>を大切にしています。</p>
+    </div>
+    <div data-m="grid2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:48px;line-height:1;color:#C9A86A">01</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:20px;line-height:1.5">眠たくならない、<br>おもしろい講座</p>
+        <p style="margin:0;font-size:14px">なるべく分かりやすく、<br>おもしろい講座で。<br><strong style="font-weight:700">眠たくならない講座</strong>を心がけています！</p>
+      </div>
+      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:48px;line-height:1;color:#C9A86A">02</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:20px;line-height:1.5">学んだあとも、<br>繋がりを大切に</p>
+        <p style="margin:0;font-size:14px">学んで終わりではなく、<br>その後の実践まで、そばで。<br><strong style="font-weight:700">グループファスティングにも<br>特別価格でご参加可能！</strong></p>
+      </div>
+      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:48px;line-height:1;color:#C9A86A">03</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:20px;line-height:1.5">「どう活かすか」まで<br>いっしょに考える</p>
+        <p style="margin:0;font-size:14px">これまで<strong style="font-weight:700">130名以上</strong>が受講。<br>学ぶ理由は人それぞれだから、<br>その先の使い方までいっしょに。</p>
+      </div>
+      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:48px;line-height:1;color:#C9A86A">04</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:20px;line-height:1.5">手作りランチと<br>試飲や試食付き</p>
+        <p style="margin:0;font-size:14px">うさしほ手作りのランチで<br>学んだことを、そのまま味わう時間も。<br><span style="font-size:12px">※ 対面参加者限定</span></p>
+      </div>
+    </div>
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+        <a href="https://x.gd/Iviw3" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;background:#574B47;color:#FAF6F2;font-weight:700;font-size:15px;letter-spacing:.04em;text-decoration:none;text-align:center;" style-hover="animation:kn-hop .6s ease;color:#FAF6F2">10/24のお申込みはこちら 🐰</a>
+        <a href="https://lin.ee/668ryLr" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid #574B47;font-weight:500;font-size:15px;text-decoration:none;text-align:center;" style-hover="background:#F3E1DE;animation:kn-hop .6s ease">LINEで気軽に質問する</a>
+      </div>
+      <p style="margin:0;font-size:12px;color:#6E615C;">初級だけか、2級までか、どっちにしよう？ など、なんでもどうぞ</p>
+    </div>
+  </div>
+</section>
+
+<section data-m="sec" style="padding:clamp(64px,10vw,112px) 0;border-top:1px solid #F3E1DE">
+  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:40px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">PAST CLASSES</div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">これまでの、1日。</h2>
+      <p style="margin:0">山の中の古民家に集まって、学んで、食べて、お話をして。<br>テストが終わるころには、<strong style="font-weight:700">みんな顔つきが変わっていきます</strong>＾＾</p>
+      <p style="margin:0;padding:4px 16px;border-radius:999px;background:#F3E1DE;font-size:14px;font-weight:700">ZOOMで受講も可能！</p>
+    </div>
+    <div data-reveal="1" data-m="row3 cap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px"><div style="position:relative;aspect-ratio:1/1"><image-slot id="past-1" shape="rounded" radius="20" placeholder="食卓を囲む講座参加者" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div><figcaption style="font-size:13px">受講後は、グループファスティングでまたつながりましょう！</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px"><div style="position:relative;aspect-ratio:1/1"><image-slot id="past-2" shape="rounded" radius="20" placeholder="テキストを手にした集合写真" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div><figcaption style="font-size:13px">ファスティング検定の1日を終えて。</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px"><div style="position:relative;aspect-ratio:1/1"><image-slot id="past-3" shape="rounded" radius="20" placeholder="オンライン参加者と記念撮影" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div><figcaption style="font-size:13px">画面の向こうの方とも、最後はいっしょに1枚。</figcaption></figure>
+    </div>
+    <div data-reveal="1" style="border:1px solid #E8C4C0;border-radius:24px;padding:clamp(20px,4vw,36px);display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;align-items:center">
+      <div style="position:relative;aspect-ratio:4/3"><image-slot id="lunch" shape="rounded" radius="20" placeholder="うさしほが手作りランチを準備中" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:24px;height:1px;background:#C9A86A"></span>LUNCH TIME</div>
+        <h3 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(22px,4vw,30px);line-height:1.5">ランチは、<br>うさしほ<span data-marker="1" style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 38%;padding:0 4px">手作り</span>！</h3>
+        <p style="margin:0">学んだあとは、同じ食卓を囲む時間も大切に。<br>次回からは、カレーの予定だよ <span style="display:inline-block;animation:kn-bob 2s ease-in-out infinite">🐰</span></p>
+        <span style="align-self:flex-start;padding:4px 14px;border-radius:999px;border:1px solid #E8C4C0;font-size:12px">対面参加者限定</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-m="sec" style="padding:clamp(64px,10vw,112px) 0;background:#F3E1DE">
+  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:40px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:24px;height:1px;background:#C9A86A"></span>CURRICULUM<span style="width:24px;height:1px;background:#C9A86A"></span></div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">1日で、何を学ぶのか。</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:24px;max-width:760px;width:100%;margin:0 auto">
+      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:14px">
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:19px"><span style="display:block;font-family:'Zen Maru Gothic',sans-serif;font-size:12px;font-weight:500">予防医学×食のセルフケア 1日講座</span>ファスティングマイスター初級<span style="font-size:13px;font-family:'Zen Maru Gothic',sans-serif">／受講内容</span></p>
+        <button onClick="{{ t2 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 18px;border-radius:999px;border:1px solid #E8C4C0;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#574B47;align-self:flex-start;" style-hover="background:#F3E1DE"><span>受講内容を見る</span><span style="flex:none;width:24px;height:24px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .3s;transform:{{ r2 }}">＋</span></button>
+        <sc-if value="{{ o2 }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+          <div style="display:flex;gap:10px"><span style="color:#C9A86A;font-size:9px;padding-top:7px">◆</span>分子整合医学とは／食育基本法とは</div>
+          <div style="display:flex;gap:10px"><span style="color:#C9A86A;font-size:9px;padding-top:7px">◆</span>ファスティングに必要な身体と栄養素の基礎知識</div>
+          <div style="display:flex;gap:10px"><span style="color:#C9A86A;font-size:9px;padding-top:7px">◆</span>ファスティングが体に起こすこと／種類</div>
+          <div style="display:flex;gap:10px"><span style="color:#C9A86A;font-size:9px;padding-top:7px">◆</span>バイタルファスティングの実践</div>
+          <div style="display:flex;gap:10px"><span style="color:#C9A86A;font-size:9px;padding-top:7px">◆</span>ファスティング中に起きる悩み10＆対処方法 など</div>
+        </div>
+        <p style="margin:0;font-family:'Zen Kaku Gothic New',sans-serif;font-size:14px;line-height:2;padding-top:12px;border-top:1px solid #F3E1DE">検定に合格すると、<br>自分自身と家族へのファスティング指導、<br>協会への相談、<br>マイスター限定セミナーへの参加、<br>推奨アイテムの特別価格購入が<br>できるようになります。</p>
+        </sc-if>
+      </div>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#E8C4C0;border:1px solid #E8C4C0;border-radius:24px;overflow:hidden">
+      <div style="background:#FAF6F2;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px">検定試験</span><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:20px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:30px">30</span>分・筆記</span><span style="font-size:13px">正解率70%以上で合格。<br>当日中に合否が分かります。</span></div>
+      <div style="background:#FAF6F2;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px">受講スタイル</span><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:20px">通学／オンライン</span><span style="font-size:13px">どちらもその場で受講・受験、<br>当日合否。</span><span style="font-size:13px;padding-top:8px;border-top:1px dashed #E8C4C0">自分のタイミングで受けたい方は<br><strong style="font-weight:700">WEB講座</strong>（約3時間・試験時間含む）も。<br><span style="color:#6E615C">※ 講師はうさしほではなくなります。</span><br>公式LINEに「<strong style="font-weight:700">WEB受講希望</strong>」とお送りください。</span><a href="https://lin.ee/668ryLr" target="_blank" rel="noopener" style="align-self:flex-start;font-size:13px;font-weight:700;text-decoration:none;border-bottom:1px solid #C9A86A">公式LINEで送る →</a></div>
+      <div style="background:#FAF6F2;padding:24px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px">合格後</span><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:20px">ディプロマ進呈</span><span style="font-size:13px">認定証が届き、<br>上位級への道もひらけます。</span></div>
+      <div style="background:#FAF6F2;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:12px">この先の級</span><span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12px;font-weight:700">ファスティングマイスター</span><span style="font-family:'Kanata','Kiwi Maru',serif;font-size:17px">初級 → 2級 → 1級</span></span><span style="font-size:13px">まずは初級から。</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="bonus" data-m="sec" style="padding:clamp(64px,10vw,112px) 0;border-top:1px solid #F3E1DE">
+  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:40px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">BONUS</div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">うさしほから学ぶ特典</h2>
+      <p style="margin:0">受講するともらえるもの・お得なこと。</p>
+    </div>
+    <div data-reveal="1" style="background:#FAF6F2;border:1px solid #E8C4C0;border-radius:24px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="align-self:flex-start;padding:4px 14px;border-radius:999px;background:#E8C4C0;font-size:12px;font-weight:700;animation:kn-sway 3s ease-in-out infinite">受講された方だけ</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:clamp(20px,3.6vw,26px);line-height:1.5">うさしほオンラインショップで<br>割引価格でお買いもの</p>
+        <p style="margin:0;font-size:14px">ドリンク、サプリなど<br>一部の商品が割引価格で購入できます。<br>学んだあとの実践も、続けやすく。</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;border-left:1px solid #C9A86A;padding:8px 0">
+        <span style="font-size:14px">最大 約</span>
+        <span style="display:flex;align-items:baseline;gap:4px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:clamp(64px,12vw,96px);line-height:1">5,000</span><span style="font-size:20px;font-weight:700">円引き</span></span>
+        <span style="font-size:12px;color:#6E615C">※ 一部商品が対象です</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:24px">
+      <article data-reveal="1" style="background:#FAF6F2;border:1px solid #E8C4C0;border-radius:24px;padding:clamp(20px,4vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px 32px;align-items:center">
+        <div data-m="kala" style="position:relative;aspect-ratio:1/1;max-width:280px;width:100%;justify-self:center"><image-slot id="bonus-kala" shape="rounded" radius="20" placeholder="KALA CRYSTALZYME 酵素ドリンク" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+        <div><p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:19px">最高級酵素ドリンク「KALA」1本プレゼント</p><p style="margin:0;font-size:13px"><span style="font-family:'Raleway',sans-serif;font-size:15px">2</span>万円相当　<strong style="font-weight:700">受講後、そのままファスティングを実践できます。</strong></p></div>
+        <div style="display:flex;flex-direction:column;border-top:1px solid #F3E1DE">
+          <div style="padding:10px 0;border-bottom:1px solid #F3E1DE;display:flex;gap:10px"><span style="color:#C9A86A">＋</span>ディプロマ（認定証）進呈</div>
+          <div style="padding:10px 0;border-bottom:1px solid #F3E1DE;display:flex;gap:10px"><span style="color:#C9A86A">＋</span>ファスティンググッズをマイスター価格で購入可能</div>
+          <div style="padding:10px 0;border-bottom:1px solid #F3E1DE;display:flex;gap:10px"><span style="color:#C9A86A">＋</span>うさしほファスティングサポート1回無料</div>
+          <div style="padding:10px 0;display:flex;gap:10px"><span style="color:#C9A86A">＋</span>うさしほイベント優先参加</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="fee" data-m="sec" style="padding:clamp(64px,10vw,112px) 0;background:#F3E1DE">
+  <div style="max-width:960px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:36px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">DETAILS &amp; FEE</div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">詳細・受講料</h2>
+      <p style="margin:0">気になることはLINEからご相談ください。</p>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:minmax(0,1fr);gap:20px;max-width:560px;width:100%;margin:0 auto">
+      <div style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:8px;align-items:flex-start;border-top:4px solid #E8C4C0">
+        <p style="margin:0;font-size:12px">予防医学×食のセルフケア 1日講座</p>
+        <p style="margin:0;font-weight:700">ファスティングマイスター初級</p>
+        <p style="margin:0;display:flex;align-items:baseline;gap:4px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:52px;line-height:1.1;letter-spacing:.02em">59,400</span><span style="font-size:15px">円（税込）</span></p>
+        <p style="margin:0;font-size:13px">講習代・検定試験代・認定証・IDカード発行代含む<br><strong style="font-weight:700">初年度年会費 免除</strong></p>
+        <span style="display:inline-flex;margin-top:6px;align-items:center;gap:6px;padding:2px 12px;border-radius:999px;border:1px solid #574B47;font-size:12px;font-weight:700">対面 残り<span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:15px">1</span>名／Zoom 受付中</span>
+        <div style="width:100%;margin-top:10px;padding-top:12px;border-top:1px solid #F3E1DE;display:flex;flex-direction:column;gap:4px"><button onClick="{{ t7 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:44px;padding:8px 18px;border-radius:999px;border:1px solid #E8C4C0;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13px;color:#574B47;align-self:flex-start" style-hover="background:#F3E1DE"><span>受講料に含まれるもの</span><span style="flex:none;width:24px;height:24px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .3s;transform:{{ r7 }}">＋</span></button><sc-if value="{{ o7 }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:4px;padding:6px 4px 0"><div style="display:flex;gap:8px;font-size:13px;line-height:1.7"><span style="color:#C9A86A;flex:none">＋</span><span>1日講座（約5時間）＋検定試験</span></div><div style="display:flex;gap:8px;font-size:13px;line-height:1.7"><span style="color:#C9A86A;flex:none">＋</span><span>認定証・IDカード発行</span></div><div style="display:flex;gap:8px;font-size:13px;line-height:1.7"><span style="color:#C9A86A;flex:none">＋</span><span>初年度年会費（5,500円）免除</span></div><div style="display:flex;gap:8px;font-size:13px;line-height:1.7"><span style="color:#C9A86A;flex:none">＋</span><span>最高級酵素ドリンク「KALA」1本（2万円相当）</span></div><div style="display:flex;gap:8px;font-size:13px;line-height:1.7"><span style="color:#C9A86A;flex:none">＋</span><span>うさしほファスティングサポート 1回</span></div><div style="display:flex;gap:8px;font-size:13px;line-height:1.7"><span style="color:#C9A86A;flex:none">＋</span><span>手作りランチ・試飲や試食（対面のみ）</span></div></div></sc-if><p style="margin:8px 0 0;font-size:13px">特典だけで <strong style="font-weight:700">約2万円相当</strong></p><button onClick="{{ t4 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 18px;border-radius:999px;border:1px solid #E8C4C0;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#574B47;align-self:flex-start;margin-top:12px;min-height:44px;font-size:13px" style-hover="background:#F3E1DE"><span>年会費について</span><span style="flex:none;width:24px;height:24px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .3s;transform:{{ r4 }}">＋</span></button><sc-if value="{{ o4 }}" hint-placeholder-val="{{ false }}"><p style="margin:10px 0 0;font-size:12px;color:#6E615C;line-height:1.8">※ ファスティングマイスター資格を継続するためには、毎年の資格更新手続きが必要です。次年度以降は更新手続きのご案内をいたします。年会費5,500円（税込）</p><p style="margin:8px 0 0;font-size:12px;color:#6E615C;line-height:1.8">※ 年会費を払わなくても、資格が消えることはありません。ただ、ファスティングドリンクなどの商品を安く購入できなくなります。年会費を払うと、ファスティングマイスターの特典が受けられます。</p></sc-if></div>
+      </div>
+    </div>
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+        <a href="https://x.gd/Iviw3" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;background:#574B47;color:#FAF6F2;font-weight:700;font-size:15px;letter-spacing:.04em;text-decoration:none;text-align:center;" style-hover="animation:kn-hop .6s ease;color:#FAF6F2">10/24のお申込みはこちら</a>
+        <a href="https://lin.ee/668ryLr" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid #574B47;font-weight:500;font-size:15px;text-decoration:none;text-align:center;" style-hover="background:#F3E1DE;animation:kn-hop .6s ease">LINEで気軽に質問する</a>
+      </div>
+      <p style="margin:0;font-size:13px">お申込みの後、公式LINEにもご一報ください。<br>相談も可能です。</p>
+    </div>
+    <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:8px clamp(20px,4vw,36px) 20px;display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid #F3E1DE"><span style="font-size:13px;font-weight:700">日　程</span><span>ファスティングマイスター初級　<span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:20px">10/24</span>（土）<br><span style="font-size:13px">お申込み期日：<span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:15px">10/10</span>（土）まで</span></span></div>
+      <div style="display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid #F3E1DE"><span style="font-size:13px;font-weight:700">時　間</span><span><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:20px">10:30 – 17:30</span><br><span style="font-size:13px">こまめな休憩とお昼休憩あり。伸びる可能性があるため、余裕をもってご確保ください。</span></span></div>
+      <div style="display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid #F3E1DE"><span style="font-size:13px;font-weight:700">会　場</span><span>大阪 南河内郡「うさしほハウス」<br><sc-if value="{{ o5 }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px">富田林駅からバス／送迎はご相談ください。お車でお越しの場合は、乗り合わせのご協力をお願いします。ランチタイムは対面参加者限定です。</span></sc-if></span></div>
+      <div style="display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid #F3E1DE"><span style="font-size:13px;font-weight:700">形　式</span><span>対面／Zoom も可能<br><span style="font-size:13px;font-weight:700">10/24は、対面 残り1名・Zoom まだ受付中です。</span><br><span style="font-size:13px">マンツーマンではなく、複数名集まり次第の開催となります。</span></span></div>
+      <div style="display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid #F3E1DE"><span style="font-size:13px;font-weight:700">お支払い</span><span>クレジットカード払い／銀行振込<br><sc-if value="{{ o5 }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px">お申込後にご希望の方法をご案内します。</span></sc-if></span></div>
+      <div style="display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding:18px 0"><span style="font-size:13px;font-weight:700">お申込み</span><span>10/24はこちらの<a href="https://x.gd/Iviw3" target="_blank" rel="noopener" style="font-weight:700;text-decoration:none;border-bottom:1px solid #C9A86A">専用リンク</a>からお申込みください<br><span style="font-size:13px">お申込みの後、<a href="https://lin.ee/668ryLr" target="_blank" rel="noopener" style="text-decoration:none;border-bottom:1px solid #C9A86A">公式LINE</a>にもご一報ください。相談も可能です。</span></span></div>
+      <button onClick="{{ t5 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 18px;border-radius:999px;border:1px solid #E8C4C0;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#574B47;align-self:flex-start;margin-top:4px;min-height:44px;font-size:13px" style-hover="background:#F3E1DE"><span>アクセス・お支払いについて</span><span style="flex:none;width:24px;height:24px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .3s;transform:{{ r5 }}">＋</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="next" data-m="sec" style="padding:clamp(64px,10vw,112px) 0;border-top:1px solid #F3E1DE">
+  <div style="max-width:880px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:32px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:24px;height:1px;background:#C9A86A"></span>NEXT STEP</div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">初級の先へ。<br><span style="font-size:.6em">2級まで学ぶとできること</span></h2>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:10px"><span style="flex:none;width:22px;height:22px;margin-top:4px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:11px">✓</span><span>うさしほのように、ファスティングのサポートも<br data-sp="1">お仕事や副業として視野に入れたい方</span></div>
+        <div style="display:flex;gap:10px"><span style="flex:none;width:22px;height:22px;margin-top:4px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:11px">✓</span><span>人に伝える仕事へ活かしたい方</span></div>
+        <div style="display:flex;gap:10px"><span style="flex:none;width:22px;height:22px;margin-top:4px;border-radius:50%;border:1px solid #C9A86A;display:flex;align-items:center;justify-content:center;font-size:11px">✓</span><span>初級で食の土台を学んだあと、<br data-sp="1">もっと身体の内側や食のしくみを知りたい方</span></div>
+      </div>
+      <p style="margin:0">初級と2級（エキスパート・ファスティングマイスター）を<br data-sp="1"><strong style="font-weight:700">続けて学ぶとお得です</strong></p>
+      <p style="margin:0;align-self:flex-start;padding:6px 18px;border-radius:999px;background:#F3E1DE;font-size:14px">約<span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:20px">3</span>名に<span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:20px">1</span>人は、<strong style="font-weight:700">2級まで</strong>学ばれています</p>
+    </div>
+    <button onClick="{{ t3 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 18px;border-radius:999px;border:1px solid #E8C4C0;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#574B47;align-self:flex-start;" style-hover="background:#F3E1DE"><span>2級・セット特典について詳しく見る</span><span style="flex:none;width:24px;height:24px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .3s;transform:{{ r3 }}">＋</span></button>
+    <sc-if value="{{ o3 }}" hint-placeholder-val="{{ false }}">
+    <div data-reveal="1" style="border:1px solid #C9A86A;border-radius:24px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:11px;letter-spacing:.3em">SET BONUS</span>
+        <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:clamp(20px,3.6vw,24px);line-height:1.5">初級と2級を<br>まとめて申し込むと、おトク</p>
+        <p style="margin:0;font-size:13px">初級＋2級のセット（ビジネスエキスパートコース）で申し込むと、<br data-sp="1">次の2つの特典がつきます。</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+        <div style="background:#FAF6F2;border:1px solid #F3E1DE;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:36px;line-height:1;color:#C9A86A">1</span>
+          <p style="margin:0;font-weight:700">受講料 <span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:22px">10,000</span>円引き</p>
+          <p style="margin:0;font-size:13px">初級＋2級の受講合計 <s>191,400円</s> のところ、</p>
+          <p style="margin:0;display:flex;align-items:baseline;gap:4px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:34px">181,400</span><span style="font-size:13px">円（税込）</span></p>
+        </div>
+        <div style="background:#FAF6F2;border:1px solid #F3E1DE;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:36px;line-height:1;color:#C9A86A">2</span>
+          <p style="margin:0;font-weight:700">協会推奨酵素ドリンク <span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:22px">2</span>本進呈</p>
+          <p style="margin:0;font-size:13px"><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:17px">40,000</span>円相当</p>
+        </div>
+      </div>
+      <p style="margin:0;align-self:center;text-align:center;font-family:'Kanata','Kiwi Maru',serif;font-size:clamp(20px,3.6vw,26px)">実質 <span data-marker="1" style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 38%;padding:0 4px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:40px">5</span>万円お得！</span></p>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+      <div style="background:#F3E1DE;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0;font-weight:700">2級までがおすすめの方</p>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:14px">
+          <span>・仕事にしなくても、身体の内側をもっと深く知りたい</span><span>・ファスティングをより深く、理論から理解したい</span><span>・人に伝えたり、サポートしたい</span><span>・食から体を整えることを、お仕事や活動として伝えたい</span><span>・副業や、これからの働き方のきっかけがほしい</span>
+        </div>
+      </div>
+      <div style="border:1px solid #E8C4C0;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0;font-weight:700">2級で学ぶこと・できること</p>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:14px">
+          <span>・ファスティングのより深い理論と応用</span><span>・カウンセリングと実践的なサポートの方法</span><span>・お客様から料金をいただいてサポートができる</span>
+        </div>
+        <p style="margin:6px 0 0;font-size:13px;padding-top:10px;border-top:1px solid #F3E1DE">通学・オンライン／2日間・約15時間<br>講座＋筆記試験と、3日間ファスティングレポートで学びを深めます。</p>
+      </div>
+    </div>
+    <div data-reveal="1" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+      <p style="margin:0;font-size:13px;color:#6E615C">※ 2級はうさしほではなく、上級講師の方から学んでいただきます。</p>
+      <a href="https://fasting.bz/certifications/fasting-meister#h2-3" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:50px;padding:0 24px;border-radius:999px;border:1px solid #574B47;font-weight:500;text-decoration:none" style-hover="background:#F3E1DE;animation:kn-hop .6s ease">2級について詳しくはこちら →</a>
+    </div>
+    </sc-if>
+
+  </div>
+</section>
+
+<section id="official" style="padding:clamp(48px,8vw,80px) 0;border-top:1px solid #F3E1DE">
+  <div style="max-width:880px;margin:0 auto;padding:0 20px">
+    <div data-reveal="1" style="border-top:1px solid #C9A86A;border-bottom:1px solid #C9A86A;padding:28px 4px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em">OFFICIAL SITE</div>
+        <p style="margin:0;font-weight:700">ファスティングマイスターについて、<br data-sp="1">もっと深く知りたい方はこちら</p>
+        <p style="margin:0;font-size:13px">講座の内容は公式サイトでも見られます。<br data-sp="1">無料説明会のご案内は、うさしほではなく<br data-sp="1">担当講師からお送りします。</p>
+      </div>
+      <a href="https://fasting.bz/" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;border-bottom:1px solid #C9A86A;padding-bottom:4px" style-hover="animation:kn-hop .6s ease">ファスティングマイスター学院 公式サイト →</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-m="sec" style="padding:clamp(64px,10vw,112px) 0">
+  <div style="max-width:760px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:32px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:24px;height:1px;background:#C9A86A"></span>QUESTIONS<span style="width:24px;height:1px;background:#C9A86A"></span></div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,5vw,38px);line-height:1.5">よくあるご質問</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+        <div style="border:1px solid #E8C4C0;border-radius:20px;overflow:hidden;background:{{ f.bg }}">
+          <button onClick="{{ f.toggle }}" style="all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 20px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:#574B47" style-hover="background:#F3E1DE">
+            <span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:20px;color:#C9A86A">Q</span>
+            <span style="flex:1">{{ f.q }}</span>
+            <span style="flex:none;width:28px;height:28px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;transition:transform .3s;transform:{{ f.rot }}">＋</span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 20px 20px 52px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:14px;line-height:2">{{ f.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="request" data-m="sec" style="padding:clamp(64px,10vw,112px) 0;background:#E3E8DE">
+  <div style="max-width:880px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:28px">
+    <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+      <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:24px;height:1px;background:#7E8F77"></span>REQUEST<span style="width:24px;height:1px;background:#7E8F77"></span></div>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(24px,4.6vw,34px);line-height:1.5">「足し算の栄養学」も<br>気になる方へ</h2>
+      <p style="margin:0;font-size:13px;font-weight:700">食と栄養の基本 1日講座／健康美容食育士 Basic（初級）</p>
+      <p style="margin:0">毎日の食事で整える、プラスの栄養学。<br>ご希望が集まり次第、開催日をお知らせします。</p>
+      <span style="padding:4px 16px;border-radius:999px;background:#B7C2AE;font-size:13px;font-weight:700">開催リクエスト受付中</span>
+    </div>
+    <div data-reveal="1" style="display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 12px;margin:0 -20px;scrollbar-width:thin;scrollbar-color:#B7C2AE transparent">
+      <sc-for list="{{ basicVoices }}" as="v" hint-placeholder-count="2">
+        <article style="flex:none;width:min(84%,380px);box-sizing:border-box;scroll-snap-align:start;border:1px solid #B7C2AE;border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:10px;background:#FAF6F2">
+          <span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:11px;letter-spacing:.2em;color:#7E8F77">VOICE</span>
+          <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:16px;line-height:1.6">{{ v.title }}</p>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:13px;line-height:1.9">
+            <sc-for list="{{ v.paras }}" as="p"><p style="margin:0"><sc-for list="{{ p }}" as="s"><sc-if value="{{ s.b }}"><strong style="font-weight:700">{{ s.t }}</strong></sc-if><sc-if value="{{ s.n }}">{{ s.t }}</sc-if></sc-for></p></sc-for>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <div style="display:flex;justify-content:center"><button onClick="{{ t6 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 18px;border-radius:999px;border:1px solid #E8C4C0;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#574B47;align-self:flex-start;align-self:center;background:#FAF6F2;border-color:#B7C2AE" style-hover="background:#F3E1DE"><span>リクエストの送り方を見る</span><span style="flex:none;width:24px;height:24px;border-radius:50%;border:1px solid #574B47;display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .3s;transform:{{ r6 }}">＋</span></button></div>
+    <sc-if value="{{ o6 }}" hint-placeholder-val="{{ false }}">
+    <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:clamp(20px,4vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <p style="margin:0;font-weight:700">リクエストの送り方</p>
+        <div style="display:flex;gap:10px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:26px;line-height:1;color:#7E8F77">1</span><span style="font-size:14px">右の文章をコピー</span></div>
+        <div style="display:flex;gap:10px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:26px;line-height:1;color:#7E8F77">2</span><span style="font-size:14px">公式LINEを開いて、貼りつけ</span></div>
+        <div style="display:flex;gap:10px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:26px;line-height:1;color:#7E8F77">3</span><span style="font-size:14px">空いているところを書いて送信</span></div>
+        <p style="margin:4px 0 0;font-size:12px;color:#6E615C">日程が決まり次第、LINEでお知らせします。<br>リクエストはお申込みではないので、気軽にどうぞ＾＾</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <pre style="margin:0;padding:16px 18px;border-radius:12px;border:1px solid #B7C2AE;background:#FFFFFF;font-family:'Zen Maru Gothic',sans-serif;font-size:14px;line-height:1.9;white-space:pre-wrap;color:#574B47">{{ requestTemplate }}</pre>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <button onClick="{{ copyTemplate }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid #574B47;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#574B47" style-hover="background:#E3E8DE">{{ copyLabel }}</button>
+          <a href="https://lin.ee/668ryLr" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:#574B47;color:#FAF6F2;font-weight:700;font-size:14px;text-decoration:none" style-hover="animation:kn-hop .6s ease;color:#FAF6F2">公式LINEで送る</a>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+  </div>
+</section>
+
+<section id="line" data-m="sec" style="padding:clamp(64px,10vw,112px) 0">
+  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,5vw,56px);align-items:center">
+    <div data-reveal="1" style="display:flex;flex-direction:column;gap:12px">
+      <div style="position:relative;aspect-ratio:4/3"><image-slot id="house" shape="rounded" radius="20" placeholder="うさしほハウスでの講座の様子" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+      <p style="margin:0;font-size:13px">もう開催しない予定だった自宅での開催を、<br>今回だけ特別に。<strong style="font-weight:700">これが最後になるかも？</strong></p>
+    </div>
+    <div data-reveal="1" style="background:#E8C4C0;border-radius:24px;padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;position:relative">
+      <span style="font-size:40px;display:inline-block;animation:kn-bob 2s ease-in-out infinite">🐰</span>
+      <h2 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(24px,4.4vw,34px);line-height:1.5">お気軽に<br>LINEどうぞ〜</h2>
+      <p style="margin:0">対面とZoomどっちがいいかな、<br>2級も迷う、、、など<br>公式LINEでなんでもご相談ください＾＾</p>
+      <div style="display:flex;flex-direction:column;align-items:stretch;gap:12px;width:100%;max-width:340px">
+        <a href="https://x.gd/Iviw3" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;background:#574B47;color:#FAF6F2;font-weight:700;font-size:15px;letter-spacing:.04em;text-decoration:none;text-align:center;min-height:58px;font-size:16px" style-hover="animation:kn-hop .6s ease;color:#FAF6F2">10/24のお申込みはこちら 💌</a>
+        <a href="https://lin.ee/668ryLr" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid #574B47;font-weight:500;font-size:15px;text-decoration:none;text-align:center;background:#FAF6F2;border-color:#FAF6F2" style-hover="background:#F3E1DE;animation:kn-hop .6s ease">LINEで気軽に質問する</a>
+      </div>
+      <p style="margin:0;font-size:13px">お申込みの後、公式LINEにもご一報ください。<br>相談も可能です。</p>
+      <span style="padding:6px 16px;border-radius:999px;background:#FAF6F2;font-size:13px;animation:kn-sway 3s ease-in-out infinite">お申込みは <span style="font-family:'Raleway',sans-serif;font-size:16px">10/10</span>（土）まで</span>
+    </div>
+  </div>
+</section>
+
+<footer style="border-top:1px solid #F3E1DE;padding:40px 20px 120px;display:flex;flex-direction:column;align-items:center;gap:6px">
+  <img src="assets/kitone-logo.png" alt="KitoNe" style="height:88px;width:auto;display:block">
+  <span style="font-size:12px;color:#6E615C">KitoNe — 予防医学 × 食のセルフケア</span>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const VOICES = [["うさしほさんから学びたいと思って受講しました",["体に取り入れないほうがいいものを知りたかったことと、ファスティングについてもっと学びたいと思ったことがきっかけでした。","そして何より、**うさしほさんから学びたい**と思ったのも受講を決めた理由のひとつです。"]],["テキストだけでは学べないことまで知ることができました",["聞いたことはあるけれど、詳しくは知らなかったこともたくさんありました。","テキストに載っていないことまで教えていただけて、**とても満足感のある学びでした！**","途中でストレッチをしたり、ヘンププロテインをいただいたり、美味しいランチを食べたり。","まるで“おしゃれな健康女子会”のようで、楽しく学ぶことができました。"]],["リラックスして楽しく学べる空間でした",["長時間の講座でしたが、あっという間に時間が過ぎました。","少人数でリラックスでき、堅苦しい雰囲気ではなく、楽しく集中して学ぶことができました。","**しほちゃんの雰囲気も空間もとても柔らかくて、居心地がよかったです。**"]],["仕事にも活かしていきたいです",["食の知識をもっと身につけて、**自分の生徒さんたちにも自信を持って食について伝えたい**と思い受講しました。","これからは自分自身だけでなく、たくさんの方が身体の内側・外側から健康に過ごせるよう、仕事にも活かしていきたいです。"]],["ネットだけでは分かりにくいことを学べました",["血糖値のことや身体の構造など、**ネットの情報だけでは分かりにくい部分まで学べたこと**が印象に残っています。","知識として知るだけではなく、身体のことをより深く理解するきっかけになりました。"]],["毎日の食事を見直すきっかけになりました",["何も考えずに生活していると、知らないうちに身体に負担になるものを取り入れてしまっていることに改めて気づきました。","健康で楽しく毎日を過ごすためにも、まずは自分からできることを取り入れ、**家族にも伝えていきたい**と思いました。"]],["食べたものが身体をつくっていることを実感しました",["身体の中は目には見えないけれど、日々食べたものが身体を巡り、細胞が生まれたり入れ替わったりしている。","**食べるものによって身体は変わっていくんだということを、より具体的にイメージできるようになりました。**"]],["ランチも学びのひとつでした",["ランチもドリンクもデザートも、どれも豪華でとても美味しかったです！","おもてなしの気持ちもとても嬉しく、さらに、**どれも自分の生活に取り入れられそうなものだったことも勉強になりました。**","実際に食べながら学べることも、この講座の楽しみのひとつでした。"],"対面受講の場合"]];
+const BASIC_VOICES = [["何を食べるかだけでなく、“吸収できる身体”も大切だと知りました",["内容がとても幅広く、今まで自分が取り組んできたことの確認にもなりました。","さらに食生活を見直すきっかけにもなり、**“何を食べたか”だけではなく、“何を吸収できたか”も大切**なのだと学びました。","糖質の摂り方や麹についての知識も深まり、できることから実践していきたいです。"]],["食材の選び方や組み合わせまで意識するようになりました",["ただ好きなものを食べるだけではなく、「この食材にはどんな栄養があるんだろう？」「どんな組み合わせで食べるといいんだろう？」と考えるようになりました。","**毎日の食事を、より身体にやさしいものにしていきたいです。**"]]];
+const seg = p => p.split('**').map((t, i) => ({ t, b: i % 2 === 1, n: i % 2 === 0 })).filter(s => s.t);
+class Component extends DCLogic {
+  voiceRef = React.createRef();
+  state = { open: 0, showMenuBtn: false, menuOpen: false, isMobile: false, copied: false, sec: {} };
+  componentDidMount() {
+    this.onScroll = () => {
+      const show = window.scrollY > window.innerHeight * 0.8;
+      if (show !== this.state.showMenuBtn) this.setState({ showMenuBtn: show });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.mq = window.matchMedia('(max-width: 767px)');
+    this.onMq = () => this.setState({ isMobile: this.mq.matches });
+    this.mq.addEventListener('change', this.onMq); this.onMq();
+    this.onScroll();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els = document.querySelectorAll('[data-reveal]');
+    const marks = document.querySelectorAll('[data-marker]');
+    els.forEach(el => { el.style.opacity = 0; el.style.transform = 'translateY(16px)'; el.style.transition = 'opacity .8s ease, transform .8s ease'; });
+    marks.forEach(el => { el.style.backgroundSize = '0% 38%'; el.style.transition = 'background-size .9s cubic-bezier(.3,.8,.3,1) .3s'; });
+    this.io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const t = e.target;
+      if (t.dataset.reveal) { t.style.opacity = 1; t.style.transform = 'none'; }
+      if (t.dataset.marker) t.style.backgroundSize = '100% 38%';
+      this.io.unobserve(t);
+    }), { threshold: 0.15 });
+    els.forEach(el => this.io.observe(el));
+    marks.forEach(el => this.io.observe(el));
+  }
+  fallbackCopy(t) { const a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} a.remove(); }
+  componentWillUnmount() { this.io && this.io.disconnect(); window.removeEventListener('scroll', this.onScroll); this.mq && this.mq.removeEventListener('change', this.onMq); }
+  renderVals() {
+    const faqData = [
+      ['テストが不安です。', '安心してください。70点で合格ですが、ほとんどの方が90〜100点。その日のうちに合格して帰っていただけるよう進めます。'],
+      ['ランチはついてきますか？', '対面の場合、うさしほ特製の軽めのランチとおやつ、ドリンクをご用意します。内容はその日のお楽しみです。（初回限定特典。再受講の場合はご相談ください）'],
+      ['会場へのアクセスは？', '会場は大阪府千早赤阪村です。お車でお越しいただくか、富田林駅からバスが出ています（往復約1,000円）。同じ料金で会場までの送迎も可能です。詳しい住所はお申込後にお伝えします。'],
+      ['日程は？', 'ファスティングマイスター初級は10/24（土）開催です（お申込みは10/10（土）まで）。対面は残り1名、Zoomはまだ受付中です。お申込みは専用リンクから、その後公式LINEにもご一報ください。'],
+      ['年会費は必ず払わないといけませんか？', '年会費を払わなくても、資格が消えることはありません。ただ、ファスティングドリンクなどの商品を安く購入できなくなります。年会費を払うと、ファスティングマイスターの特典が受けられます。'],
+      ['自分のタイミングで受けたいです。', 'WEB講座（約3時間・試験時間含む）もあります。講師はうさしほではなくなりますが、ご希望の方は公式LINEからお気軽にどうぞ。'],
+      ['健康美容食育士 Basic（初級）は受けられますか？', 'ご希望が集まり次第の開催です。公式LINEから開催リクエストを送っていただいた方に、日程が決まり次第お知らせします。'],
+      ['対面で受けたいけれど、遠くて…。', 'Zoomでのオンライン受講も可能です。再受講をご希望の場合は、協会へ5,500円のお支払いで受けていただけます。'],
+      ['受けたあとも、相談できますか？', '1日で終わりではなく、学ばれた方同士がつながれる場をつくっています。イベントや勉強会のご案内も優先的にお届けします。']
+    ];
+    const nav = [['foryou','こんなあなたへ'],['voice','受講された方の声'],['courses','講座について'],['merit','うさしほから学ぶ理由'],['bonus','特典'],['fee','日程・受講料'],['next','2級・公式サイト'],['faq','Q&A'],['request','食と栄養の基本（リクエスト）'],['line','LINEで相談']];
+    return {
+      o1: !!this.state.sec[1], r1: this.state.sec[1] ? 'rotate(45deg)' : 'none', t1: () => this.setState(s => ({ sec: { ...s.sec, 1: !s.sec[1] } })),
+      o2: !!this.state.sec[2], r2: this.state.sec[2] ? 'rotate(45deg)' : 'none', t2: () => this.setState(s => ({ sec: { ...s.sec, 2: !s.sec[2] } })),
+      o3: !!this.state.sec[3], r3: this.state.sec[3] ? 'rotate(45deg)' : 'none', t3: () => this.setState(s => ({ sec: { ...s.sec, 3: !s.sec[3] } })),
+      o4: !!this.state.sec[4], r4: this.state.sec[4] ? 'rotate(45deg)' : 'none', t4: () => this.setState(s => ({ sec: { ...s.sec, 4: !s.sec[4] } })),
+      o5: !!this.state.sec[5], r5: this.state.sec[5] ? 'rotate(45deg)' : 'none', t5: () => this.setState(s => ({ sec: { ...s.sec, 5: !s.sec[5] } })),
+      o7: !!this.state.sec[7], r7: this.state.sec[7] ? 'rotate(45deg)' : 'none', t7: () => this.setState(s => ({ sec: { ...s.sec, 7: !s.sec[7] } })),
+      o6: !!this.state.sec[6], r6: this.state.sec[6] ? 'rotate(45deg)' : 'none', t6: () => this.setState(s => ({ sec: { ...s.sec, 6: !s.sec[6] } })),
+      voices: VOICES.map((v, i) => ({ no: String(i + 1).padStart(2, '0'), title: '「' + v[0] + '」', paras: v[1].map(seg), note: v[2] || '', hasNote: !!v[2] })),
+      basicVoices: BASIC_VOICES.map(v => ({ title: '「' + v[0] + '」', paras: v[1].map(seg) })),
+      voiceRef: this.voiceRef,
+      voicePrev: () => this.voiceRef.current && this.voiceRef.current.scrollBy({ left: -this.voiceRef.current.clientWidth * 0.8, behavior: 'smooth' }),
+      voiceNext: () => this.voiceRef.current && this.voiceRef.current.scrollBy({ left: this.voiceRef.current.clientWidth * 0.8, behavior: 'smooth' }),
+      requestTemplate: "【開催リクエスト】\n講座：健康美容食育士 Basic（初級）\nお名前：\n希望の受講方法：対面／Zoom\n都合のいい曜日・時期：\nひとこと（任意）：",
+      copyLabel: this.state.copied ? 'コピーしました ✓' : '文章をコピーする',
+      copyTemplate: () => { const t = "【開催リクエスト】\n講座：健康美容食育士 Basic（初級）\nお名前：\n希望の受講方法：対面／Zoom\n都合のいい曜日・時期：\nひとこと（任意）："; const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2000); };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, () => { this.fallbackCopy(t); done(); }); else { this.fallbackCopy(t); done(); } },
+      showMenuBtn: this.state.showMenuBtn,
+      showMobileBar: this.state.isMobile && this.state.showMenuBtn,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      menuItems: nav.map(([id, label], i) => ({ label, href: '#' + id, sep: i ? '1px solid #F3E1DE' : 'none',
+        go: e => { e.preventDefault(); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' }); this.setState({ menuOpen: false }); } })),
+      faqs: faqData.map(([q, a], i) => {
+        const open = this.state.open === i;
+        return { q, a, open, rot: open ? 'rotate(45deg)' : 'none', bg: open ? '#FAF6F2' : 'transparent',
+          toggle: () => this.setState({ open: open ? -1 : i }) };
+      }),
+      compareRows: [
+        { label: 'ひとことで', a: '引き算の栄養学。\n「何を避けた方がいいのか？」と\nその理由を知る。', b: '足し算の栄養学。\n「どう食べるか」を知る。' },
+        { label: '向いている人', a: 'からだを一度リセットしたい\nファスティングに興味はあるけれど不安\n今後もファスティングをし続けたい\n体の不調をなんとかしたい', b: '毎日の食事を整えたい\n家族のごはんに活かしたい\n栄養や食の基礎知識をつけたい\n5大栄養素について学びたい' },
+        { label: '主に学ぶこと', a: 'バイタルファスティングの実践\n細胞と代謝の仕組み', b: '7大栄養素とバランス\n抗糖化・抗酸化・発酵食' },
+        { label: '学習時間', a: '1日 約5時間\n＋検定試験30分', b: '1日 約6.5時間\n＋検定試験30分' },
+        { label: '取得後にできること', a: '自分と家族へのファスティング指導\n協会への相談／限定セミナー参加', b: '自分に最適な栄養量が分かる\n準備食・回復食が組める／指導にも活用' },
+        { label: 'この先の学び', a: '2級 → 1級', b: 'Advance（2級）' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
