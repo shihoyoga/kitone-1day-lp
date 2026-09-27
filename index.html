@@ -30,7 +30,9 @@ html{scroll-behavior:smooth}
 [data-m~="hero-photo"]{position:absolute!important;inset:0!important;aspect-ratio:auto!important;width:auto!important;z-index:0}
 [data-m~="hero-veil"]{display:block!important}
 [data-m~="hero-text"]{position:relative;z-index:1}
-[data-m~="hero-badge"]{display:none!important}
+[data-m~="hero-badge"]{top:14px!important;right:14px!important;bottom:auto!important;width:76px!important;height:76px!important;z-index:2}
+[data-m~="hero-badge"] span:first-child{font-size:8px!important}
+[data-m~="hero-badge"] span:last-child{font-size:13px!important}
 [data-m~="row3"]{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
 [data-m~="row3"]>*{margin-top:0!important}
 [data-m~="sq"]{aspect-ratio:1/1!important}
@@ -56,6 +58,17 @@ html{scroll-behavior:smooth}
 }
 @media (min-width:768px){[data-m~="sp-only"]{display:none!important}}
 
+@keyframes kn-pop{0%{transform:scale(0) rotate(-90deg);opacity:0}70%{transform:scale(1.2) rotate(8deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+@keyframes kn-wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+@media (hover:hover){
+[style*="border-radius:24px"],[style*="border-radius:20px"]{transition:transform .35s cubic-bezier(.3,1.4,.5,1),box-shadow .35s ease}
+article[style*="border-radius:24px"]:hover,[data-lift]:hover{transform:translateY(-5px);box-shadow:0 10px 24px rgba(87,75,71,.10)}
+image-slot{transition:transform .6s ease}
+[data-m~="sq"]:hover image-slot,figure:hover image-slot{transform:scale(1.03)}
+}
+.kn-in{animation:kn-pop .55s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes kn-hero-in{0%{opacity:0;transform:translateY(22px)}100%{opacity:1;transform:none}}
+@keyframes kn-hero-photo{0%{opacity:0;transform:scale(1.08)}100%{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </helmet>
@@ -97,7 +110,7 @@ html{scroll-behavior:smooth}
     <div data-m="hero-text" style="display:flex;flex-direction:column;gap:24px">
       <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;display:flex;align-items:center;gap:12px"><span style="width:28px;height:1px;background:#C9A86A"></span>SPECIAL INVITATION</div>
       <h1 style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-weight:500;font-size:clamp(26px,7.4vw,44px);line-height:1.45;letter-spacing:.04em;text-wrap:pretty">2026年<br><span style="white-space:nowrap">初の<span data-marker="1" style="background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 88%/100% 38%;padding:0 4px">1日講座</span>、開催！</span></h1>
-      <p style="margin:0;font-size:clamp(16px,2.4vw,19px);font-weight:500;line-height:1.8">うさしほが<strong style="font-weight:700">脱サラする<br>きっかけになった講座</strong></p>
+      <p style="margin:0;font-size:clamp(16px,2.4vw,19px);font-weight:500;line-height:1.8">うさしほが<br><strong style="font-weight:700">脱サラするきっかけになった講座</strong></p>
       <div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #C9A86A;border-bottom:1px solid #C9A86A;padding:16px 0">
         <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px"><span data-m="keep" style="padding:6px 14px;border-radius:12px;background:#E8C4C0;font-size:14px;font-weight:700;line-height:1.5;display:inline-flex;flex-direction:column">予防医学×食のセルフケア 1日講座<span style="font-size:11px;font-weight:500">（ファスティングマイスター初級）</span></span><span style="display:flex;align-items:baseline;gap:2px"><span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:32px">10/24</span><span style="font-size:14px">（土）開催</span></span><span data-m="line" style="display:inline-flex;align-items:center;gap:6px;padding:2px 12px;border-radius:999px;border:1px solid #574B47;font-size:12px;font-weight:700">対面 残り<span style="font-family:'Raleway',sans-serif;font-weight:400;font-size:15px">1</span>名／Zoom 受付中</span><p style="margin:0;width:100%;font-size:13px">お申込みは <strong style="font-weight:700"><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:17px">10/10</span>（土）まで</strong>。</p></div>
       </div>
@@ -170,7 +183,7 @@ html{scroll-behavior:smooth}
             <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:17px;line-height:1.6">{{ v.title }}</p>
             <sc-if value="{{ v.hasNote }}" hint-placeholder-val="{{ false }}"><span style="align-self:flex-start;padding:2px 12px;border-radius:999px;background:#F3E1DE;font-size:12px;font-weight:700">{{ v.note }}</span></sc-if>
             <div style="display:flex;flex-direction:column;gap:10px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:14px;line-height:1.9;padding-top:12px;border-top:1px dashed #E8C4C0">
-              <sc-for list="{{ v.paras }}" as="p"><p style="margin:0"><sc-for list="{{ p }}" as="s"><sc-if value="{{ s.b }}"><strong style="font-weight:700;background:linear-gradient(#F3E1DE,#F3E1DE) no-repeat 0 90%/100% 40%">{{ s.t }}</strong></sc-if><sc-if value="{{ s.n }}">{{ s.t }}</sc-if></sc-for></p></sc-for>
+              <sc-for list="{{ v.paras }}" as="p"><p style="margin:0"><sc-for list="{{ p }}" as="s"><sc-if value="{{ s.b }}"><strong data-marker="1" style="font-weight:700;background:linear-gradient(#E8C4C0,#E8C4C0) no-repeat 0 90%/100% 38%">{{ s.t }}</strong></sc-if><sc-if value="{{ s.n }}">{{ s.t }}</sc-if></sc-for></p></sc-for>
             </div>
           </article>
         </sc-for>
@@ -260,22 +273,22 @@ html{scroll-behavior:smooth}
       <p style="margin:0">資格の内容はどこで受けても同じ。<br>だからこそ、<strong style="font-weight:700">学んだあと</strong>を大切にしています。</p>
     </div>
     <div data-m="grid2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
-      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+      <div data-reveal="1" data-lift="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
         <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:48px;line-height:1;color:#C9A86A">01</span>
         <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:20px;line-height:1.5">眠たくならない、<br>おもしろい講座</p>
         <p style="margin:0;font-size:14px">なるべく分かりやすく、<br>おもしろい講座で。<br><strong style="font-weight:700">眠たくならない講座</strong>を心がけています！</p>
       </div>
-      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+      <div data-reveal="1" data-lift="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
         <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:48px;line-height:1;color:#C9A86A">02</span>
         <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:20px;line-height:1.5">学んだあとも、<br>繋がりを大切に</p>
         <p style="margin:0;font-size:14px">学んで終わりではなく、<br>その後の実践まで、そばで。<br><strong style="font-weight:700">グループファスティングにも<br>特別価格でご参加可能！</strong></p>
       </div>
-      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+      <div data-reveal="1" data-lift="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
         <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:48px;line-height:1;color:#C9A86A">03</span>
         <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:20px;line-height:1.5">「どう活かすか」まで<br>いっしょに考える</p>
         <p style="margin:0;font-size:14px">これまで<strong style="font-weight:700">130名以上</strong>が受講。<br>学ぶ理由は人それぞれだから、<br>その先の使い方までいっしょに。</p>
       </div>
-      <div data-reveal="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+      <div data-reveal="1" data-lift="1" style="background:#FAF6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
         <span style="font-family:'Raleway',sans-serif;font-weight:200;font-size:48px;line-height:1;color:#C9A86A">04</span>
         <p style="margin:0;font-family:'Kanata','Kiwi Maru',serif;font-size:20px;line-height:1.5">手作りランチと<br>試飲や試食付き</p>
         <p style="margin:0;font-size:14px">うさしほ手作りのランチで<br>学んだことを、そのまま味わう時間も。<br><span style="font-size:12px">※ 対面参加者限定</span></p>
@@ -596,39 +609,96 @@ class Component extends DCLogic {
       if (show !== this.state.showMenuBtn) this.setState({ showMenuBtn: show });
     };
     window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.vPaused = false;
+    const vr = () => this.voiceRef.current;
+    const pause = () => { this.vPaused = true; clearTimeout(this.vResume); };
+    const resume = () => { clearTimeout(this.vResume); this.vResume = setTimeout(() => { this.vPaused = false; }, 4000); };
+    this.vBind = setInterval(() => {
+      const el = vr(); if (!el || el.dataset.bound) return; el.dataset.bound = '1';
+      ['pointerenter', 'touchstart', 'focusin'].forEach(ev => el.addEventListener(ev, pause, { passive: true }));
+      ['pointerleave', 'touchend', 'focusout'].forEach(ev => el.addEventListener(ev, resume, { passive: true }));
+      clearInterval(this.vBind);
+    }, 300);
     this.mq = window.matchMedia('(max-width: 767px)');
     this.onMq = () => this.setState({ isMobile: this.mq.matches });
     this.mq.addEventListener('change', this.onMq); this.onMq();
     this.onScroll();
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const ht = document.querySelector('[data-m~="hero-text"]');
+    if (ht) [...ht.children].forEach((c, i) => { c.style.animation = 'kn-hero-in .9s cubic-bezier(.3,1.2,.5,1) ' + (0.15 + i * 0.14) + 's both'; });
+    const hp = document.querySelector('[data-m~="hero-photo"]');
+    if (hp) hp.style.animation = 'kn-hero-photo 1.4s cubic-bezier(.2,.7,.2,1) both';
+    const hm = ht && ht.querySelector('[data-marker]');
+    if (hm) { hm.dataset.shown = '1'; hm.style.backgroundSize = '0% 38%'; setTimeout(() => { hm.style.transition = 'background-size .9s cubic-bezier(.3,.8,.3,1)'; hm.style.backgroundSize = '100% 38%'; }, 700); }
     const els = document.querySelectorAll('[data-reveal]');
     const marks = document.querySelectorAll('[data-marker]');
     els.forEach(el => { el.style.opacity = 0; el.style.transform = 'translateY(16px)'; el.style.transition = 'opacity .8s ease, transform .8s ease'; });
     marks.forEach(el => { el.style.backgroundSize = '0% 38%'; el.style.transition = 'background-size .9s cubic-bezier(.3,.8,.3,1) .3s'; });
     this.io = new IntersectionObserver(entries => entries.forEach(e => {
       if (!e.isIntersecting) return;
-      const t = e.target;
-      if (t.dataset.reveal) { t.style.opacity = 1; t.style.transform = 'none'; }
-      if (t.dataset.marker) t.style.backgroundSize = '100% 38%';
+      const t = e.target; this.show(t);
       this.io.unobserve(t);
-    }), { threshold: 0.15 });
+    }), { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+
+    // stagger children of grids
+    els.forEach(el => {
+      const cs = getComputedStyle(el);
+      if ((cs.display === 'grid' || cs.display === 'flex') && el.children.length > 1 && el.children.length < 12 && !el.querySelector('[data-reveal]') && !el.parentElement.closest('[data-reveal]')) {
+        el.style.opacity = 1; el.style.transform = 'none'; el.style.transition = 'none';
+        [...el.children].forEach((c, i) => { c.style.opacity = 0; c.style.transform = 'translateY(18px)'; c.style.transition = 'opacity .7s ease ' + (i * 0.1) + 's, transform .7s cubic-bezier(.3,1.3,.5,1) ' + (i * 0.1) + 's'; });
+        el.dataset.stagger = '1';
+      }
+    });
+    // gold kicker lines grow
+    const lines = [...document.querySelectorAll('span')].filter(s => /width:\s*2[48]px/.test(s.getAttribute('style') || '') && /height:\s*1px/.test(s.getAttribute('style') || ''));
+    lines.forEach(l => { l.style.transform = 'scaleX(0)'; l.style.transition = 'transform .8s cubic-bezier(.3,.8,.3,1) .2s'; this.io.observe(l); l.dataset.line = '1'; });
+    // check marks pop
+    const checks = [...document.querySelectorAll('#foryou span, #next span')].filter(s => s.textContent.trim() === '✓');
+    checks.forEach((c, i) => { c.style.opacity = 0; c.dataset.check = String(i % 10); this.io.observe(c); });
+    // count up big numbers
+    const nums = [...document.querySelectorAll('span')].filter(s => s.children.length === 0 && /^[\d,]{3,}$/.test(s.textContent.trim()) && parseFloat(getComputedStyle(s).fontSize) >= 30);
+    nums.forEach(n => { n.dataset.count = n.textContent.trim(); this.io.observe(n); });
+    // photos gentle zoom-in
+    document.querySelectorAll('image-slot').forEach(p => { p.style.transform = 'scale(1.06)'; p.style.transition = 'transform 1.4s cubic-bezier(.2,.7,.2,1)'; p.dataset.zoom = '1'; this.io.observe(p); });
     els.forEach(el => this.io.observe(el));
+    this.sweep(false);
+    this.onSweep = () => { cancelAnimationFrame(this.sr); this.sr = requestAnimationFrame(() => this.sweep(false)); };
+    window.addEventListener('scroll', this.onSweep, { passive: true });
+    this.st = setTimeout(() => this.sweep(false), 1200);
     marks.forEach(el => this.io.observe(el));
   }
+  show(t) {
+    if (!t || t.dataset.shown) return; t.dataset.shown = '1';
+    if (t.dataset.reveal && !t.dataset.stagger) { t.style.opacity = 1; t.style.transform = 'none'; }
+    if (t.dataset.stagger) [...t.children].forEach(c => { c.style.opacity = 1; c.style.transform = 'none'; });
+    if (t.dataset.line) t.style.transform = 'scaleX(1)';
+    if (t.dataset.check) { t.style.animationDelay = (+t.dataset.check * 0.12) + 's'; t.classList.add('kn-in'); t.style.opacity = ''; }
+    if (t.dataset.zoom) t.style.transform = 'scale(1)';
+    if (t.dataset.count) { const target = +t.dataset.count.replace(/,/g, ''); const t0 = performance.now(); const step = now => { const p = Math.min(1, (now - t0) / 1100); const v = Math.round(target * (1 - Math.pow(1 - p, 3))); t.textContent = v.toLocaleString('en-US'); if (p < 1) requestAnimationFrame(step); else t.textContent = t.dataset.count; }; requestAnimationFrame(step); }
+    if (t.dataset.marker) t.style.backgroundSize = '100% 38%';
+  }
+  sweep(all) {
+    const vh = window.innerHeight;
+    document.querySelectorAll('[data-reveal],[data-marker],[data-line],[data-check],[data-count],[data-zoom]').forEach(el => {
+      if (el.dataset.shown) return;
+      const r = el.getBoundingClientRect();
+      if (all || (r.top < vh * 0.95 && r.left < window.innerWidth && r.right > 0)) this.show(el);
+    });
+  }
   fallbackCopy(t) { const a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} a.remove(); }
-  componentWillUnmount() { this.io && this.io.disconnect(); window.removeEventListener('scroll', this.onScroll); this.mq && this.mq.removeEventListener('change', this.onMq); }
+  componentWillUnmount() { this.io && this.io.disconnect(); window.removeEventListener('scroll', this.onScroll); clearInterval(this.vTimer); clearInterval(this.vBind); clearTimeout(this.vResume); window.removeEventListener('scroll', this.onSweep); clearTimeout(this.st); this.mq && this.mq.removeEventListener('change', this.onMq); }
   renderVals() {
     const faqData = [
-      ['テストが不安です。', '安心してください。70点で合格ですが、ほとんどの方が90〜100点。その日のうちに合格して帰っていただけるよう進めます。'],
-      ['ランチはついてきますか？', '対面の場合、うさしほ特製の軽めのランチとおやつ、ドリンクをご用意します。内容はその日のお楽しみです。（初回限定特典。再受講の場合はご相談ください）'],
-      ['会場へのアクセスは？', '会場は大阪府千早赤阪村です。お車でお越しいただくか、富田林駅からバスが出ています（往復約1,000円）。同じ料金で会場までの送迎も可能です。詳しい住所はお申込後にお伝えします。'],
-      ['日程は？', 'ファスティングマイスター初級は10/24（土）開催です（お申込みは10/10（土）まで）。対面は残り1名、Zoomはまだ受付中です。お申込みは専用リンクから、その後公式LINEにもご一報ください。'],
-      ['年会費は必ず払わないといけませんか？', '年会費を払わなくても、資格が消えることはありません。ただ、ファスティングドリンクなどの商品を安く購入できなくなります。年会費を払うと、ファスティングマイスターの特典が受けられます。'],
-      ['自分のタイミングで受けたいです。', 'WEB講座（約3時間・試験時間含む）もあります。講師はうさしほではなくなりますが、ご希望の方は公式LINEからお気軽にどうぞ。'],
-      ['健康美容食育士 Basic（初級）は受けられますか？', 'ご希望が集まり次第の開催です。公式LINEから開催リクエストを送っていただいた方に、日程が決まり次第お知らせします。'],
-      ['うさしほファスティングサポートはどんなものですか？', 'ファスティングの準備期間から回復期間まで、毎日LINEでサポートのメッセージをお送りします！カウンセリングを受けたい場合や、マンツーマンでみっちりサポートを受けたい場合は別途有料となりますので、ご相談ください。'],
-      ['再受講したいです。', '再受講料5,500円を協会にお支払いいただくと受講可能です。その場合も、専用リンクからお申し込みのうえ、公式LINEでうさしほにもご連絡ください。対面はご新規様優先となります。また、再受講の場合ランチは有料とさせていただきます。'],
-      ['対面で受けたいけれど、遠くて…。', 'Zoomでのオンライン受講も可能です。']
+      ['テストが不安です。', '安心してください。70点で合格ですが、ほとんどの方が90〜100点。その日のうちに合格して帰っていただけるよう進めます🐰🥕'],
+      ['ランチはついてきますか？', '対面の場合、うさしほ特製の軽めのランチとおやつ、ドリンクをご用意します。内容はその日のお楽しみです。（初回限定特典。再受講の場合はご相談ください）🐰🥕'],
+      ['会場へのアクセスは？', '会場は大阪府千早赤阪村です。お車でお越しいただくか、富田林駅からバスが出ています（往復約1,000円）。同じ料金で会場までの送迎も可能です。詳しい住所はお申込後にお伝えします🐰🥕'],
+      ['日程は？', 'ファスティングマイスター初級は10/24（土）開催です（お申込みは10/10（土）まで）。対面は残り1名、Zoomはまだ受付中です。お申込みは専用リンクから、その後公式LINEにもご一報ください🐰🥕'],
+      ['年会費は必ず払わないといけませんか？', '年会費を払わなくても、資格が消えることはありません。ただ、ファスティングドリンクなどの商品を安く購入できなくなります。年会費を払うと、ファスティングマイスターの特典が受けられます🐰🥕'],
+      ['自分のタイミングで受けたいです。', 'WEB講座（約3時間・試験時間含む）もあります。講師はうさしほではなくなりますが、ご希望の方は公式LINEからお気軽にどうぞ🐰🥕'],
+      ['健康美容食育士 Basic（初級）は受けられますか？', 'ご希望が集まり次第の開催です。公式LINEから開催リクエストを送っていただいた方に、日程が決まり次第お知らせします🐰🥕'],
+      ['うさしほファスティングサポートはどんなものですか？', 'ファスティングの準備期間から回復期間まで、毎日LINEでサポートのメッセージをお送りします！カウンセリングを受けたい場合や、マンツーマンでみっちりサポートを受けたい場合は別途有料となりますので、ご相談ください🐰🥕'],
+      ['再受講したいです。', '再受講料5,500円を協会にお支払いいただくと受講可能です。その場合も、専用リンクからお申し込みのうえ、公式LINEでうさしほにもご連絡ください。対面はご新規様優先となります。また、再受講の場合ランチは有料とさせていただきます🐰🥕'],
+      ['対面で受けたいけれど、遠くて…。', 'Zoomでのオンライン受講も可能です🐰🥕']
     ];
     const nav = [['foryou','こんな方におすすめ'],['voice','受講された方のお声'],['courses','どんな講座？'],['instructor','講師 うさしほ'],['merit','うさしほから学ぶいいところ'],['bonus','受講特典'],['fee','日程・受講料'],['next','2級・もっと学びたい方へ'],['faq','よくあるご質問'],['request','健康美容食育士について'],['line','お申込み・ご質問']];
     return {
@@ -642,8 +712,8 @@ class Component extends DCLogic {
       voices: VOICES.map((v, i) => ({ no: String(i + 1).padStart(2, '0'), title: '「' + v[0] + '」', paras: v[1].map(seg), note: v[2] || '', hasNote: !!v[2] })),
       basicVoices: BASIC_VOICES.map(v => ({ title: '「' + v[0] + '」', paras: v[1].map(seg) })),
       voiceRef: this.voiceRef,
-      voicePrev: () => this.voiceRef.current && this.voiceRef.current.scrollBy({ left: -this.voiceRef.current.clientWidth * 0.8, behavior: 'smooth' }),
-      voiceNext: () => this.voiceRef.current && this.voiceRef.current.scrollBy({ left: this.voiceRef.current.clientWidth * 0.8, behavior: 'smooth' }),
+      voicePrev: () => { this.vPaused = true; clearTimeout(this.vResume); this.vResume = setTimeout(() => { this.vPaused = false; }, 6000); this.voiceRef.current && this.voiceRef.current.scrollBy({ left: -this.voiceRef.current.clientWidth * 0.8, behavior: 'smooth' }); },
+      voiceNext: () => { this.vPaused = true; clearTimeout(this.vResume); this.vResume = setTimeout(() => { this.vPaused = false; }, 6000); this.voiceRef.current && this.voiceRef.current.scrollBy({ left: this.voiceRef.current.clientWidth * 0.8, behavior: 'smooth' }); },
       requestTemplate: "【開催リクエスト】\n講座：健康美容食育士 Basic（初級）\nお名前：\n希望の受講方法：対面／Zoom\n都合のいい曜日・時期：\nひとこと（任意）：",
       copyLabel: this.state.copied ? 'コピーしました ✓' : '文章をコピーする',
       copyTemplate: () => { const t = "【開催リクエスト】\n講座：健康美容食育士 Basic（初級）\nお名前：\n希望の受講方法：対面／Zoom\n都合のいい曜日・時期：\nひとこと（任意）："; const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2000); };
